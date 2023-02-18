@@ -1,0 +1,72 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    perspective: 800px;
+    background-color: #cccccc;
+}
+.cube{
+    width: 210px;
+    height: 210px;
+    transform: rotateX(-20deg) rotateY(-20deg);
+    animation: rotate 10s infinite alternate;
+    transform-style: preserve-3d;
+}
+.face{
+    border: 2px solid #001b19;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 210px;
+    height: 210px;
+    position: absolute;
+}
+.front{
+    /* Blue: #0053A1 */
+    background: linear-gradient(45deg, #003f7a, #0064c2);
+    transform: translateZ(105px);
+}
+.right{
+    /* Orange: #EF7D00 */
+    background: linear-gradient(45deg, #cc6900, #ff8400);
+    transform: rotateY(90deg) translateZ(105px);
+}
+.back{
+    /* Green: #00A23A */
+    background: linear-gradient(45deg, #007428, #00bb41);
+    transform: rotateY(180deg) translateZ(105px);
+}
+.left{
+    /* Red: #E40428 */
+    background: linear-gradient(45deg, #b90321, #f5062d);
+    transform: rotateY(-90deg) translateZ(105px);
+}
+.top{
+    /* White: #FFFDF6 */
+    background: linear-gradient(45deg, #dfddd7, #FFFDF6);
+    transform: rotateX(90deg) translateZ(105px);
+}
+.bottom{
+    /* Yellow: #FFE100 */
+    background: linear-gradient(45deg, #d8bf00, #FFE100);
+    transform: rotateX(-90deg) translateZ(105px);
+}
+.tile{
+    width: 70px;
+    height: 70px;
+}
+.tr{transform: translateX(70px) translateY(-70px);}
+.tm{transform: translateY(-70px);}
+.tl{transform: translateX(-70px) translateY(-70px);}
+.mr{transform: translateX(70px);}
+.ml{transform: translateX(-70px);}
+.br{transform: translateX(70px) translateY(70px);}
+.bm{transform: translateY(70px);}
+.bl{transform: translateX(-70px) translateY(70px);}
+@keyframes rotate {
+    from {transform: rotateX(-20deg) rotateY(-10deg) rotateZ(0deg);}
+    50% {transform: rotateX(-20deg) rotateY(320deg) rotateZ(320deg);}
+    to {transform: rotateX(-20deg) rotateY(-20deg) rotateZ(180deg);}
+}
