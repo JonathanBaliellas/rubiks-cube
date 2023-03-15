@@ -14,7 +14,7 @@ body{
     transform-style: preserve-3d;
 }
 .face{
-    border: 2px solid #001b19;
+    border: 5px solid #001b19;
     border-radius: 5px;
     display: flex;
     align-items: center;
